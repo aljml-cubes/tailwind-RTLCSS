@@ -1,5 +1,30 @@
 import { createApp } from "vue";
-import "./style.css";
 import App from "./App.vue";
+
+function setStyle(dir: string) {
+  const oldLink = document.getElementById("dynamic-style") as HTMLLinkElement;
+  if (oldLink) oldLink.remove();
+
+  const link = document.createElement("link");
+  link.id = "dynamic-style";
+  link.rel = "stylesheet";
+  link.href = dir === "rtl" ? "/src/style.rtl.css" : "/src/style.css";
+  document.head.appendChild(link);
+}
+
+const html = document.documentElement;
+let currentDir = html.getAttribute("dir") || "ltr";
+
+setStyle(currentDir);
+
+const observer = new MutationObserver(() => {
+  const newDir = html.getAttribute("dir") || "ltr";
+  if (newDir !== currentDir) {
+    currentDir = newDir;
+    setStyle(currentDir);
+  }
+});
+
+observer.observe(html, { attributes: true, attributeFilter: ["dir"] });
 
 createApp(App).mount("#app");

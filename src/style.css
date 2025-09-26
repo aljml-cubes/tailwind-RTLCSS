@@ -1,1 +1,12 @@
+/* This RTL CSS file will generated after run a generate:RTLCSS script */
 @import "tailwindcss";
+
+.custom-box {
+  margin-left: 60px;
+  padding-left: 20px;
+  text-align: left;
+  background-color: #fce7f3;
+  border: 1px solid #f472b6;
+  border-radius: 8px;
+  padding: 16px;
+}

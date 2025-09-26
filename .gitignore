@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Vue compiled output
+*.vue.js
+*.vue.d.ts
+# TypeScript build cache
+tsconfig.tsbuildinfo

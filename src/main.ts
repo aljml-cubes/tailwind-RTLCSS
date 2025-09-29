@@ -5,7 +5,6 @@ const setStyle = (dir: string) => {
   const oldLink = document.getElementById("dynamic-style") as HTMLLinkElement;
   if (oldLink) oldLink.remove();
   const link = document.createElement("link");
-  link.id = "dynamic-style";
   link.rel = "stylesheet";
   link.href = dir === "rtl" ? "/src/style.rtl.css" : "/src/style.css";
   document.head.appendChild(link);

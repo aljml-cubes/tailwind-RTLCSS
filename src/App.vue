@@ -75,9 +75,7 @@
         </div>
       </div> -->
 
-      <p
-        class="mb-4 border-4 border-gray-900 w-52 p-6 bg-blue-500 ml-9 mr-9 mt-10"
-      >
+      <p class="mb-4 border-4 border-gray-900 w-52 p-6 bg-blue-500 ml-9">
         {{ tGlobal.tailwindText }}
       </p>
 

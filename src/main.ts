@@ -6,7 +6,7 @@ const setStyle = (dir: string) => {
   if (oldLink) oldLink.remove();
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = dir === "rtl" ? "/src/style.rtl.css" : "/src/style.css";
+  link.href = dir === "rtl" ? "/src/tailwind.rtl.css" : "/src/tailwind.css";
   document.head.appendChild(link);
 };
 

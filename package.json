@@ -7,6 +7,7 @@
     "dev": "vite",
     "generate:RTLCSS": "rtlcss src/style.css src/style.rtl.css",
     "generate:ShadCNRTL": "rtlcss src/shadcn.css src/shadcn.rtl.css",
+    "build:css": "npx tailwindcss -i ./src/style.css -o ./src/tailwind.css && rtlcss ./src/tailwind.css ./src/tailwind.rtl.css",
     "build:vite": "vite build",
     "build": "npm run build:vite",
     "preview": "vite preview"
@@ -16,6 +17,7 @@
     "vue": "^3.5.21"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
     "@tailwindcss/postcss": "^4.1.13",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
